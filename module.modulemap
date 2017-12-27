@@ -1,0 +1,4 @@
+module PerfectCMongo [system] {
+    header "mongoc.h"
+    export *
+}
