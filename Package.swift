@@ -1,25 +1,13 @@
 // swift-tools-version:4.0
 import PackageDescription
 let package = Package(
-    name: "PerfectCMongo",
+	name: "PerfectCMongo",
 	pkgConfig: "libmongoc-1.0",
 	providers: [
-		.brewItem(["mongo-c-driver"]),
-		.aptItem(["libmongoc-dev"]),
+		.brew(["mongo-c-driver"]),
+		.apt(["libmongoc-dev"]),
 	],
-    products: [
-		.library(
-			name: "PerfectCMongo",
-			targets: ["PerfectCMongo"]
-		),
-    ],
-    dependencies: [
-        .package(url: "https://github.com/PerfectSideRepos/Perfect-CBSON.git", from: "0.0.0"),
-    ],
-    targets: [
-		.target(
-			name: "PerfectCMongo",
-			dependencies: ["PerfectCBSON"]
-		)
-    ]
+	dependencies: [
+		.package(url: "https://github.com/PerfectSideRepos/Perfect-CBSON.git", from: "0.0.0"),
+	]
 )
