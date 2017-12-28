@@ -14,7 +14,7 @@ let package = Package(
 		),
     ],
     dependencies: [
-        .package(url: "https://github.com/PerfectSideRepos/Perfect-CBSON.git", .branch("master")),
+        .package(url: "https://github.com/PerfectSideRepos/Perfect-CBSON.git", from: "0.0.0"),
     ],
     targets: [
 		.target(
